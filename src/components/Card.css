@@ -1,0 +1,40 @@
+.card{
+    background-color:#fff;
+    padding: 16px;
+    margin-bottom: 16px;
+    max-width: 300px; 
+}
+.image{
+    background-color:#f2f2f2;
+}
+img{
+    width: 218px;
+    display: block;
+    margin: 0 auto;
+}
+.mission-name{
+    margin: 16px 0;
+    color: #51537c;
+    font-size: 16px;
+    font-weight: 600;
+}
+.usp{
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.left{
+    color: #030303;
+    font-weight: 600;
+}
+
+.right{
+    color: #87889b;
+}
+
+@media screen and (min-width: 700px) {
+    .card{
+        margin: 16px 0 16px 16px;
+        flex: 1;
+    }
+}

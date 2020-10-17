@@ -1,0 +1,20 @@
+h2{
+    font-size: 16px;
+    line-height: 21px;
+    color: #040404;
+    margin: 0;
+}
+.filters{
+    margin: 0 16px;
+}
+h3{
+    color: #656565;
+    font-size: 14px;
+    border-bottom: 1px solid #d9d9d9;
+    text-align: center;
+}
+.filter-option{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
