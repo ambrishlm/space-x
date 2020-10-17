@@ -4,7 +4,7 @@
     "dev": "nodemon -e css,js,jsx,ejs,cjs,ts,json,mjs script.js",
     "webpack-production": "NODE_ENV=production webpack -p",
     "babel-production": "NODE_ENV=production COMPILER_ENV=server babel --out-dir dist --config-file ./.babelrc.server.json src",
-    "start": "node script.js",
+    "start": "node dist/server.js",
     "build": "npm run webpack-production && npm run babel-production",
     "netlify:deploy": "netlify deploy --dir=./dist -p -m \"$(git log -1 --pretty=%B)\""
   },
