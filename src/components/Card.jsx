@@ -6,7 +6,7 @@ export const Card = ({ data }) => {
     return (
         <div className="card">
             <div className="image">
-                <LazyLoad height={762} offsetVertical={300}>
+                <LazyLoad width={218}>
                     {data.links.mission_patch_small ? <img src={data.links.mission_patch_small} alt={data.mission_name} /> : null}
                 </LazyLoad>
             </div>
