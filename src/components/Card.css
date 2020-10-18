@@ -2,7 +2,7 @@
     background-color:#fff;
     padding: 16px;
     margin-bottom: 16px;
-    max-width: 400px; 
+    max-width: 684px; 
 }
 .image{
     background-color:#f2f2f2;
@@ -36,5 +36,6 @@ img{
     .card{
         margin: 16px 0 16px 16px;
         flex: 1;
+        max-width: 275px; 
     }
 }
