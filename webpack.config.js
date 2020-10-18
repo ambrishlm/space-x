@@ -2,6 +2,9 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
 const production = process.env.NODE_ENV === 'production'
 
 const pages = ['index']
@@ -60,7 +63,7 @@ const config = [{
 
         }, 'css-loader']
       }, {
-        test: /\.(jpg|jpeg|png|svg|gif)$/,
+        test: /\.(jpg|jpeg|png|svg|gif|ico)$/,
         use: [{
           loader: 'file-loader',
           options: {
@@ -85,7 +88,12 @@ const config = [{
           chunks: 'initial'
         }
       }
-    }
+    },
+    minimize: true,
+    minimizer: [
+      new CssMinimizerPlugin(),
+      new UglifyJsPlugin()
+    ],
   },
 
   plugins: [
