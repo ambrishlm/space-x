@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {  useState, useEffect } from 'react';
 import './App.css';
 import { Title } from '../components/Title';
 import { Footer } from '../components/Footer';
@@ -7,7 +7,7 @@ import { Card } from '../components/Card';
 import { fetchPrograms } from '../api';
 import Loader from 'react-loader-spinner';
 
-export const App = ({ launchPrograms }) => {
+export const App = React.memo(({ launchPrograms }) => {
     const [programs, setPrograms] = useState(launchPrograms);
     const [filterState, setFilterState] = useState({ launch_success: "", land_success: "", launch_year: "" });
     const [loading, setLoading] = useState(false);
@@ -23,6 +23,7 @@ export const App = ({ launchPrograms }) => {
     useEffect(() => {
         setLoading(prev => !prev);
         fetchData();
+        return () => console.log('unmounting...');
     }, [filterState])
 
     return (
@@ -39,9 +40,9 @@ export const App = ({ launchPrograms }) => {
             <Footer />
         </div>
     )
-}
+})
 
-export const LoadingIndicator = () => {
+export const LoadingIndicator = React.memo(() => {
     return (<div
         style={{
             width: "100%",
@@ -53,4 +54,4 @@ export const LoadingIndicator = () => {
     >
         <Loader type="ThreeDots" color="#2BAD60" height="100" width="100" />
     </div>)
-}
+})

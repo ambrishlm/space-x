@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Button.css'
 
-export const Button = ({ active, option, setOption }) => {
+export const Button = React.memo(({ active, option, setOption }) => {
     return (
         <button
             value={option}
@@ -10,4 +10,4 @@ export const Button = ({ active, option, setOption }) => {
             {option}
         </button>
     )
-}
+})

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Filter.css';
 import { Button } from './Button'
 
-export const Filter = ({ setFilterState }) => {
+export const Filter = React.memo(({ setFilterState }) => {
     const [year, setYear] = useState('');
     const [landing, setLanding] = useState('');
     const [launching, setLaunching] = useState('');
@@ -81,4 +81,4 @@ export const Filter = ({ setFilterState }) => {
             </div>
         </>
     )
-}
+})

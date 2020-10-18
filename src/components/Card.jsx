@@ -2,7 +2,7 @@ import React from 'react';
 import './Card.css';
 import LazyLoad from 'react-lazy-load';
 
-export const Card = ({ data }) => {
+export const Card = React.memo(({ data }) => {
     return (
         <div className="card">
             <div className="image">
@@ -40,4 +40,4 @@ export const Card = ({ data }) => {
             </div>
         </div>
     )
-}
+})
