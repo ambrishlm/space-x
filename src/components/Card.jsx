@@ -6,7 +6,7 @@ export const Card = React.memo(({ data }) => {
     return (
         <div className="card">
             <div className="image">
-                <LazyLoad width={218}>
+                <LazyLoad>
                     {data.links.mission_patch_small ? <img src={data.links.mission_patch_small} alt={data.mission_name} /> : null}
                 </LazyLoad>
             </div>
