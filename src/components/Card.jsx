@@ -1,11 +1,14 @@
 import React from 'react';
 import './Card.css';
+import LazyLoad from 'react-lazy-load';
 
 export const Card = ({ data }) => {
     return (
         <div className="card">
             <div className="image">
-                {data.links.mission_patch_small ? <img src={data.links.mission_patch_small} alt={data.mission_name} /> : null}
+                <LazyLoad height={762} offsetVertical={300}>
+                    {data.links.mission_patch_small ? <img src={data.links.mission_patch_small} alt={data.mission_name} /> : null}
+                </LazyLoad>
             </div>
             <div className="content">
                 <div className="mission-name">

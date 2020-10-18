@@ -5,8 +5,7 @@
     "webpack-production": "NODE_ENV=production webpack -p",
     "babel-production": "NODE_ENV=production COMPILER_ENV=server babel --out-dir dist --config-file ./.babelrc.server.json src",
     "start": "node dist/server.js",
-    "build": "npm run webpack-production && npm run babel-production",
-    "netlify:deploy": "netlify deploy --dir=./dist -p -m \"$(git log -1 --pretty=%B)\""
+    "build": "npm run webpack-production && npm run babel-production"
   },
   "author": "Ambarish",
   "license": "MIT",
@@ -34,7 +33,6 @@
     "file-loader": "^6.1.1",
     "html-webpack-plugin": "^4.5.0",
     "mini-css-extract-plugin": "^0.9.0",
-    "netlify-cli": "^2.65.6",
     "nodemon": "^2.0.5",
     "raw-loader": "^4.0.2",
     "webpack": "^4.44.2",
@@ -48,6 +46,7 @@
     "isomorphic-fetch": "^3.0.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
+    "react-lazy-load": "^3.1.13",
     "react-loader-spinner": "^3.1.14"
   }
 }
